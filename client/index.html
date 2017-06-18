@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js"></script>
+    <link rel="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css"/>
+
+
+    <title>client</title>
+  </head>
+  <body>
+    <div id="fb-root"></div>
+    <script src="static/facebook.js" charset="utf-8"></script>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#fb-login').click(function(){
+          console.log('clicked')
+          window.fbAsyncInit = function() {
+            FB.init({
+              appId: '1693290074304262',
+              cookie: true, // enable cookies to allow the server to access
+              // the session
+              xfbml: true, // parse social plugins on this page
+              version: 'v2.9' // use graph api version 2.8
+            });
+          }
+          // FB.getLoginStatus(function(response) {
+          //   checkLoginState();
+          // });
+        })
+      })
+    </script>
+  </body>
+</html>
